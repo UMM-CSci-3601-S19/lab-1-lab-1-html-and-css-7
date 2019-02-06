@@ -8,87 +8,104 @@ use float to make something locate itself on the right or left
 */
 
 body{
-    padding: 30px;
-    background-color: rgba(43, 57, 84, 0.95);
-    display: flex;
-    flex-direction: column; /* this says how the flex items will align (e.g. 'row') */
-    align-items: center; /* These next two properties center the flex items */
-    justify-content: center;
+	background-color: rgb(48, 46, 108);
+	display: flex; /* this says how the flex items will align (e.g. 'row') */
+	align-items: center; /* These next two properties center the flex items */
+	justify-content: center;
+	flex-flow: wrap;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	flex-direction: column;
+	overflow-x: hidden;
 }
 @media screen and (min-width: 925px) {
   .pslo-courses-container {
-    display: flex;
-    flex-direction: row;
-    max-width: 53em;
+	flex-direction: column;
+	width: 100%;
+	display: flex;
   }
 }
 
 .faculty-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
 }
 
 #main-title {
-  color: white;
-  font-family: 'Patua One', monospace;
-  text-align: center;
-  font-size: 4rem;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	color: white;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 4rem;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 h2 {
-  font-family: 'EB Garamond', serif;
-  color:white;
-  font-size: xx-large;
-  text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color: white;
+	font-size: xx-large;
+	text-align: center;
+	width: auto;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .section {
-  padding: 20px;
-  margin: 10px;
-  max-width: 48em;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
 }
 
 #courses {
-  background-color: #4b658a;
-  font-family: 'Marcellus', sans-serif;
-  color: white;
-  border: 5px solid;
+	background-color: #4c7bde;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	color: white;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-bottom-width: 5px;
+	border-top-width: 5px;
+	width: 100%;
 }
 
 #pslo {
-  background-color: #496687;
-  font-family: 'Marcellus', sans-serif;
-  color: white;
-  border: 5px solid;
+	background-color: #4c7bde;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	color: white;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-bottom-width: 5px;
+	border-top-width: 5px;
+	width: 100%;
 }
 #faculty {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    border-style: solid;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
 }
 #faculty>ul>li {
-  display: inline-block;
-  font-family: sans-serif;
-  padding: 30px;
-  color: white;
-  margin:30px;
+	display: inline-block;
+	font-family: sans-serif;
+	padding: 30px;
+	color: white;
+	margin: 30px;
+	background-color: rgb(89, 68, 177);
 }
 
 #faculty-list {
-  padding-left: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; /* This tell's the flex items to wrap if there
-                        isn't enough space for all of the items. Without this the
-                        faculty images will be in a row and only resize well unitl around
-                        550px width of screen. */
-  justify-content: center;
-  align-content: center;
+	padding-left: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	overflow: auto;
 }
 
 .name {
@@ -97,12 +114,14 @@ h2 {
 }
 
 .office {
-  font-family: 'Marcellus', sans-sans-serif;;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	;
 }
 
 img.pic {
-  width: 100%;
-  border: 4px solid #000000;
+	width: auto;
+	border: 4px solid #000000;
+	float: left;
 }
 
 #style ul {
@@ -140,10 +159,29 @@ img.pic {
 }
 
 #validation {
-  font-size: 100%;
-  background-color: #000000;
-  padding: 25px;
-  color: white;
-  border-style: solid;
-  border-color: white;
+	font-size: 100%;
+	background-color: #000000;
+	padding: 25px;
+	color: white;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-color: white;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	;
+}
+h6 {
+	font-size: 20px;
+}
+#KK {
+	border: medium solid rgba(0,0,0,1.00);
+	margin-left: 10px;
+}
+#Nic {
+	border: medium solid rgba(0,0,0,1.00);
+}
+#Elena {
+	border: medium solid rgba(0,0,0,1.00);
+}
+#Peter {
+	border: medium solid rgba(0,0,0,1.00);
 }
