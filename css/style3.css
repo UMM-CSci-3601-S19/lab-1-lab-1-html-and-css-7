@@ -9,8 +9,8 @@ use float to make something locate itself on the right or left
 
 body{
   background-color: rgb(6, 61, 35);
-  display: flex; /* this says how the flex items will align (e.g. 'row') */
-  align-items: center; /* These next two properties center the flex items */
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-flow: wrap;
   margin-top: 0px;
@@ -19,7 +19,6 @@ body{
   margin-bottom: 0px;
   padding: 0px;
   flex-direction: row;
-  overflow-x: hidden;
 }
 @media screen and (min-width: 925px) {
   .pslo-courses-container {
@@ -30,17 +29,28 @@ body{
 
   }
 }
-#main-title {
-  color: #06ce89;
-  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-  text-align: center;
-  font-size: 4rem;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+@media screen and (min-width: 1500px) {
+  #main-title {
+    color: #06ce89;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    text-align: left;
+    font-size: 4rem;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
-  transform: rotate(90deg);
-  transform-origin: top left 0;
-  margin-Top: 0px;
-  margin-right: 180px;
+    transform: rotate(90deg);
+    transform-origin: top left 0;
+    margin-Top: 0px;
+    margin-right: 600px;
+  }
+}
+@media screen and (max-width: 1499px) {
+  #main-title {
+    color: #06ce89;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
 }
 .faculty-container {
   display: flex;
@@ -98,12 +108,13 @@ h2 {
   border-top-width: 5px;
   width: 70%;
   transform: rotate(15deg);
-  margin-bottom: 100px;
+  margin-bottom: 130px;
+  margin-top: 100px;
 }
 #faculty {
   flex-direction: column;
   justify-content: center;
-  align-content: right;
+  align-content: center;
   width: 90%;
 
 }
@@ -152,18 +163,17 @@ img.pic {
 }
 
 #style li {
-  float: left; /*explore what happens if this is 'right' instead*/
+  float: left;
 }
 
 #style li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 12px; /*this adds some spacing around the items in our "nav bar" */
+  padding: 10px 12px;
   text-decoration: none;
 }
 
-/* Change the link background color to #000 (black) on hover */
 #style li a:hover {
   background-color: #06ce89;
 }
