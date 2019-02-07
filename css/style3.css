@@ -6,17 +6,14 @@ use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 
 */
-
+/* #1 General change of fonts and colors */
 body{
   background-color: rgb(6, 61, 35);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: wrap;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
-  margin-bottom: 0px;
+  margin: 0px;
   padding: 0px;
   flex-direction: row;
 }
@@ -29,7 +26,7 @@ body{
 
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1500px) { /* #2 Added media screen for when the screen is large enough to change to these properties, also rotates and transforms the origin */
   #main-title {
     color: #06ce89;
     font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -43,7 +40,7 @@ body{
     margin-right: 600px;
   }
 }
-@media screen and (max-width: 1499px) {
+@media screen and (max-width: 1499px) { /* Added media screen for when the screen is small enough. This one doesn't rotate */
   #main-title {
     color: #06ce89;
     font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -74,23 +71,18 @@ h2 {
 .section {
 
   margin: 10px 50px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   /*margin-top: 10px;*/
   /*margin-bottom: 10px;*/
   max-width: 100%;
 }
 
-#courses {
+#courses { /* #3 Added rotate, changed colors, font, width */
   background-color: #0b9149;
   font-family: "Times New Roman", serif;
   color: white;
-  border-bottom-style: solid;
-  border-top-style: solid;
-  border-bottom-width: 5px;
-  border-top-width: 5px;
+  border-bottom: 5px solid;
+  border-top: 5px solid;
   width: 70%;
   transform: rotate(-15deg);
   margin-top: 100px;
@@ -98,14 +90,12 @@ h2 {
 
 }
 
-#pslo {
+#pslo { /* Added rotate, changed colors, margins, font, width */
   background-color: #0b9149;
   font-family: "Times New Roman", serif;
   color: white;
-  border-bottom-style: solid;
-  border-top-style: solid;
-  border-bottom-width: 5px;
-  border-top-width: 5px;
+  border-bottom: 5px solid;
+  border-top: 5px solid;
   width: 70%;
   transform: rotate(15deg);
   margin-bottom: 130px;
@@ -118,7 +108,7 @@ h2 {
   width: 90%;
 
 }
-#faculty>ul>li {
+#faculty>ul>li { /* This is nesting that references the line of the unlisted line of faculty that affects the members and their pictures */
   display: inline-block;
   font-family: sans-serif;
   padding: 30px;
@@ -174,11 +164,11 @@ img.pic {
   text-decoration: none;
 }
 
-#style li a:hover {
+#style li a:hover { /* changed background color */
   background-color: #06ce89;
 }
 
-#style {
+#style { /*  #4 removed width, is now on the right side */
   position: fixed;
   right: 0;
   top: 0;
@@ -200,7 +190,7 @@ img.pic {
 h6 {
   font-size: 20px;
 }
-#KK {
+#KK { /* #5 rotated all four IDs */
   border: medium solid rgba(0,0,0,1.00);
   transform: rotate(20deg);
 
